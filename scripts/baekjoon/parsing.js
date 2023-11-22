@@ -56,13 +56,13 @@ function makeDetailMessageAndReadme(data) {
   // prettier-ignore-start
   const readme = `# ${problemId}. ${title} (${level}) \n\n`
     + `[Problem Link](https://www.acmicpc.net/problem/${problemId}) \n\n`
-    + `### Tags\n\n`
+    + `## Tags\n\n`
     + `${category || "Empty"}\n\n` + (!!problem_description ? ''
-      + `### Problem Description\n\n${problem_description}\n\n`
-      + `### Input\n\n ${problem_input}\n\n`
-      + `### Output\n\n ${problem_output}\n\n`
+      + `## Problem Description\n\n${problem_description}\n\n`
+      + `## Input\n\n ${problem_input}\n\n`
+      + `## Output\n\n ${problem_output}\n\n`
       : '')
-      + `### Submission Date\n\n`
+      + `## Submission Date\n\n`
       + `${dateInfo}\n\n`
       ;
   // prettier-ignore-end
