@@ -174,5 +174,5 @@ function convertImageTagAbsoluteURL(doc = document) {
  * @return {string} 포맷된 스트링
  */
 function getDateString(date){
-  return `${date.getFullYear()}년 ${date.getMonth() + 1}월 ${date.getDay()}일 ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`
+  return `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDay()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`
 }
