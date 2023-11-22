@@ -249,7 +249,7 @@ async function findProblemInfoAndSubmissionCode(problemId, submissionId) {
   if (!isNull(problemId) && !isNull(submissionId)) {
     return Promise.all([getProblemDescriptionById(problemId), getSubmitCodeById(submissionId), getSolvedACById(problemId)])
       .then(([description, code, solvedJson]) => {
-        const problem_tags = solvedJson.tags.flatMap((tag) => tag.displayNames).filter((tag) => tag.language === 'ko').map((tag) => tag.name);
+        const problem_tags = solvedJson.tags.flatMap((tag) => tag.displayNames).filter((tag) => tag.language === 'en').map((tag) => tag.name);
         const title = solvedJson.titleKo;
         const level = bj_level[solvedJson.level];
 
