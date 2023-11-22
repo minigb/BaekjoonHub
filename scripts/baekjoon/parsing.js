@@ -47,13 +47,14 @@ function makeDetailMessageAndReadme(data) {
   const score = parseNumberFromString(result);
   const directory = `Baekjoon-Online-Judge/${level.replace(/ .*/, '')}/${problemId}. ${convertSingleCharToDoubleChar(title)}`;
   const message = `Upload solution for Problem #${problemId}.`
-    + ((isNaN(score)) ? ' ' : `, Score: ${score} point `) // 서브 태스크가 있는 문제로, 점수가 있는 경우 점수까지 커밋 메시지에 표기
-    + `-BaekjoonHub`;
+    // + ((isNaN(score)) ? ' ' : `, Score: ${score} point `) // 서브 태스크가 있는 문제로, 점수가 있는 경우 점수까지 커밋 메시지에 표기
+    // + `-BaekjoonHub`
+    ;
   const category = problem_tags.join(', ');
   const fileName = `${convertSingleCharToDoubleChar(title)}.${languages[language]}`;
   const dateInfo = submissionTime ?? getDateString(new Date(Date.now()));
   // prettier-ignore-start
-  const readme = `# ${level.replace(/^[^\s]*\s/, '')}: ${title} (${problemId}) \n\n`
+  const readme = `# ${problemId}. ${title} (${level}) \n\n`
     + `[Problem Link](https://www.acmicpc.net/problem/${problemId}) \n\n`
     + `### Tags\n\n`
     + `${category || "Empty"}\n\n` + (!!problem_description ? ''
